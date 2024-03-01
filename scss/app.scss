@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+.page{
+    background:no-repeat url('../assets/images/bg-sidebar-mobile.svg') hsl(207, 85%, 89%);
+    height: 85dvh;
+    .steps{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .step{
+            width: 35px;
+            height: 35px;
+            margin: 50px 10px 20px;
+            border-radius: 100%;
+            border:1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .active{
+            background-color: hsl(207, 85%, 89%);
+            color: black;
+        }
+    }
+}
+.btn_section{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 15px auto;
+    a{
+        // text-decoration: none;
+        color: hsl(231, 11%, 63%);
+    }
+    .btn{
+        background-color:  hsl(213, 96%, 18%);
+        border:none;
+        width:100px;
+        border-radius: 5px;
+    }
+}

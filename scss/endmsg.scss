@@ -1,0 +1,25 @@
+.endmsg{
+    margin: 0 auto;
+    padding: 3rem 1.5rem 3rem ;
+    width: 90%;
+    height:fit-content;
+    background-color: white;
+    border-radius: 0.8rem;
+    text-align: center;
+    position: relative;
+    top: 18%;
+
+    img{
+        width: 5rem;
+        height: 5rem;
+        margin: 1.5rem 0 ;
+        
+    }
+    h2{
+        font-weight: 700;
+        color: hsl(213, 96%, 18%);
+    }
+    p{
+        color: hsl(231, 11%, 63%);
+    }
+}

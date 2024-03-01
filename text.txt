@@ -1,0 +1,54 @@
+ if(PlanPeriod === 'monthly'){ 
+        return (
+        <>
+            <section className='addOns'>
+                    <h2>Pick add-ons</h2>
+                    <button onClick={handleServices}>click</button>
+                <p>Add-ons help enhance your gaming experience.</p>
+                <div className="card_options">
+                    <div style={whenCheck(IsChecked.option1)} className="card">
+                        <input name='option1' type='checkbox' checked={IsChecked.option1} onChange={() => HandleCheck('option1')} />
+                        <div>Online service<p>Access to multiplayer games</p></div>
+                        <span>+$1/mo</span>
+                    </div>
+                    <div style={whenCheck(IsChecked.option2)} className="card">
+                        <input name='option2' type='checkbox' checked={IsChecked.option2} onChange={() => HandleCheck('option2')} />
+                        <div>Larger storage<p>Extra 1TB of cloud save</p></div>
+                        <span>+$2/mo</span>
+                    </div>
+                    <div style={whenCheck(IsChecked.option3)} className="card">
+                        <input name='option3' type='checkbox' checked={IsChecked.option3} onChange={() => HandleCheck('option3')} />
+                        <div>Customizable Profile<p>Custom theme on your profile</p></div>
+                        <span>+$2/mo</span>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+    } else {
+        return (
+            <>
+                <section className='addOns'>
+                    <h2>Pick add-ons</h2>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                    <div className="card_options">
+                            <div style={whenCheck(IsChecked.option4)} className="card">
+                                <input name='option4'type='checkbox'checked={IsChecked.option4} onChange={()=>HandleCheck('option4')}/>
+                                <div>Online service<p>Access to multiplayer games</p></div>
+                                <span>+$10/yr</span>
+                            </div>
+                            <div style={whenCheck(IsChecked.option5)} className="card">
+                                <input name='option5'type='checkbox'checked={IsChecked.option5} onChange={()=>HandleCheck('option5')}/>
+                                <div>Larger storage<p>Extra 1TB of cloud save</p></div>
+                                <span>+$20/yr</span>
+                            </div>
+                            <div style={whenCheck(IsChecked.option6)} className="card">
+                                <input name='option6' type='checkbox' checked={IsChecked.option6} onChange={()=>HandleCheck('option6')} />
+                                <div>Customizable Profile<p>Custom theme on your profile</p></div>
+                                <span>+$20/yr</span>
+                            </div>
+                    </div>
+                </section>
+            </>
+        );
+    }
