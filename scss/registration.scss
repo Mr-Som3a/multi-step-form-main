@@ -1,8 +1,8 @@
 .registration{
-    margin: 0 auto;
-    padding: 1.5rem 1.3rem;
+    margin: 0 auto 2rem;
+    padding: 1.5rem 1.3rem 2.2rem;
     width: 90%;
-    height: fit-content;
+    height: 25rem;
     background-color: white;
     border-radius: 0.8rem;
     h2{
@@ -11,5 +11,9 @@
     }
     p{
     color: hsl(231, 11%, 63%);
+    }
+    span{
+        color: red;
+        float: right;
     }
 }

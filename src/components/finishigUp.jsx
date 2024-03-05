@@ -1,8 +1,8 @@
 import '../../scss/finishingUp.scss';
-const FinishingUp = ({ PlanPeriod,SelectedPlan,SelectedOption,NextPage,PP,TP }) => {
+const FinishingUp = ({ styleOfGoBack,handleGoBack,PlanPeriod,SelectedPlan,SelectedOption,NextPage,PP,TP }) => {
     
     
-    return ( 
+    return (
         <>
             <section className='finishingUp'>
                 <h2>Finishing up</h2>
@@ -10,14 +10,13 @@ const FinishingUp = ({ PlanPeriod,SelectedPlan,SelectedOption,NextPage,PP,TP }) 
                 <div className='conclusion'>
                     <div className='arrange'>
                         <div>
-                            <h6>{`${SelectedPlan&&SelectedPlan.planName} (${PlanPeriod})`}</h6>
-                            <a style={{ color: 'gray', fontSize: '1rem',textDecoration:'underline' }} onClick={() => NextPage(2)}>change</a>
+                            <h6>{`${SelectedPlan && SelectedPlan.planName} (${PlanPeriod})`}</h6>
+                            <a style={{ color: 'gray', fontSize: '1rem', textDecoration: 'underline' }} onClick={() => NextPage(2)}>change</a>
                         </div>
-                        <span style={{margin:'auto 0'}}>{`+$ ${SelectedPlan.price}/${PP}`}</span>
+                        <span style={{ margin: 'auto 0' }}>{`+$ ${SelectedPlan.price}/${PP}`}</span>
                     </div>
                     <hr />
-                    {console.log(SelectedOption)}
-                    {SelectedOption&&SelectedOption.map(serv=> (
+                    {SelectedOption && SelectedOption.map(serv => (
                         <div key={serv.name} className="arrange">
                             <p>{serv.name}</p>
                             <span>{`+${serv.price}/${PP}`}</span>
@@ -25,11 +24,15 @@ const FinishingUp = ({ PlanPeriod,SelectedPlan,SelectedOption,NextPage,PP,TP }) 
                     ))}
                     {/* ############################################### */}
                 </div>
-                <div className='arrange'style={{margin:'1.5rem 1rem 0'}}>
-                    <p>{`Total (per ${(PP==='mo')?'month':'year'})`}</p>
+                <div className='arrange' style={{ margin: '1.5rem 1rem 0' }}>
+                    <p>{`Total (per ${(PP === 'mo') ? 'month' : 'year'})`}</p>
                     <span style={{ color: 'blue' }}>+${TP}/{PP}</span>
                 </div>
             </section>
+            <div className='btn_section'>
+                <a style={styleOfGoBack} onClick={handleGoBack}> Go Back</a>
+                <button className="btn btn-primary" type='submit'>confirm</button>
+            </div>
         </>
     );
 }
