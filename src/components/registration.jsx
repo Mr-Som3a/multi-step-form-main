@@ -1,7 +1,7 @@
 import Input from './_input';
 import '../../scss/registration.scss'
 import '../../scss/_input.scss'
-const Registration = ({ register, errors,styleOfGoBack,forbedden,handleGoNext,handleGoBack }) => {
+const Registration = ({ register, errors,styleOfGoBack,touchedFields,forbedden,handleGoNext,handleGoBack }) => {
     return (
         <>
             <section className='registration'>
@@ -22,7 +22,7 @@ const Registration = ({ register, errors,styleOfGoBack,forbedden,handleGoNext,ha
             </section>
             <div className='btn_section'>
                 <a style={styleOfGoBack} onClick={handleGoBack}> Go Back</a>
-                <button className="btn btn-primary" type='button' onClick={Object.keys(errors).length > 0 ? forbedden : handleGoNext}>Next Step</button>
+                <button className="btn btn-primary"disabled={Object.keys(touchedFields).length===0?true:false} type='button' onClick={Object.keys(errors).length > 0 ? forbedden : handleGoNext}>Next Step</button>
             </div>
         </>
     );

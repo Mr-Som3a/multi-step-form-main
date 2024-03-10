@@ -1,13 +1,14 @@
 .endmsg{
     padding: 3rem 1.5rem 3rem ;
     width: 90%;
-    height:fit-content;
+    // height:fit-content;
     background-color: white;
     border-radius: 0.8rem;
     text-align: center;
     position: absolute;
-    left: 5%;
-    top: 18%;
+    left: 12rem;
+    top: 6rem;
+
 
     img{
         width: 5rem;
@@ -22,4 +23,13 @@
     p{
         color: hsl(231, 11%, 63%);
     }
+}
+@media screen and (min-width:620px){
+    .page .endmsg{
+        height: 60dvh; 
+        left: 12rem;
+        top: 6rem;
+    }
+    
+    
 }

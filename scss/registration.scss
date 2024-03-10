@@ -1,9 +1,9 @@
 .registration{
-    margin: 0 auto 2rem;
+    margin: 0 auto;
     padding: 1.5rem 1.3rem 2.2rem;
-    width: 90%;
-    height: 25rem;
-    background-color: white;
+    width: 100%;
+    height: fit-content;
+    // background-color: rgb(255, 255, 255);
     border-radius: 0.8rem;
     h2{
         font-weight: 700;
@@ -15,5 +15,10 @@
     span{
         color: red;
         float: right;
+    }
+}
+@media screen and (min-width:620px) {
+    .registration{
+        margin: 0;
     }
 }

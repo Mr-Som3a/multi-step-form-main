@@ -1,7 +1,7 @@
 import '../../scss/addOns.scss'
 import { useState } from 'react'
 
-const AddOns = ({styleOfGoBack,disabling,forbedden,handleGoNext,typeOfButton,handleGoBack,State,Services,HChange,PP}) => {
+const AddOns = ({styleOfGoBack,handleGoNext,handleGoBack,State,Services,HChange,PP}) => {
     
     const whenCheck = (checkbox) => {
         const style = {
@@ -29,7 +29,7 @@ const AddOns = ({styleOfGoBack,disabling,forbedden,handleGoNext,typeOfButton,han
             </section>
             <div className='btn_section'>
                 <a style={styleOfGoBack} onClick={handleGoBack}> Go Back</a>
-                <button className="btn btn-primary" type={typeOfButton}
+                <button className="btn btn-primary" 
                     onClick={handleGoNext}>Next Step</button>
             </div>
         </>

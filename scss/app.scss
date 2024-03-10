@@ -4,64 +4,17 @@
     box-sizing: border-box;
     font-family: 'Ubuntu';
 }
-
-
-.page{
-    background:no-repeat url('../assets/images/bg-sidebar-mobile.svg') hsl(207, 85%, 89%);
-    height: fit-content;
-    .steps{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        .step{
-            width: 2.2rem;
-            height: 2.2rem;
-            margin: 3rem .8rem 1.2rem;
-            border-radius: 100%;
-            border:.05rem solid white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-        }
-        .active{
-            background-color: hsl(207, 85%, 89%);
-            color: black;
-        }
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .btn_section{
-            background-color: rgb(255, 255, 255);
-            height: 15dvh;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 1.5rem;
-            position: relative;
-            bottom: 0rem;
-            a{
-                // text-decoration: none;
-                color: hsl(231, 11%, 63%);
-            }
-            .btn{
-                background-color:  hsl(213, 96%, 18%);
-                border:none;
-                width:100px;
-                border-radius: 5px;
-            }
-        }
-    }
-}
-@media screen and (min-width:650px) {
 body{
-    background:no-repeat url('../assets/images/bg-sidebar-desktop.svg');
+    background-color: hsl(207, 85%, 89%);
     .page{
-        height: 70dvh;
+        height:100dvh;
         .steps{
-                
+            background:no-repeat url('../assets/images/bg-sidebar-mobile.svg');
+            height:200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .step_container{
                 .step{
                     width: 2.2rem;
                     height: 2.2rem;
@@ -72,10 +25,96 @@ body{
                     justify-content: center;
                     align-items: center;
                     color: white;
+                    .stepInfo{
+                        display: none;
+                    }
                 }
-                .active{
-                    background-color: hsl(207, 85%, 89%);
-                    color: black;
+            }
+        }
+        form{
+            position: relative;
+            top: -6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .btn_section{
+                background-color: rgb(255, 255, 255);
+                height: 15dvh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem;
+                position: absolute;
+                bottom: -11rem;
+                width: 100%;
+                a{
+                    // text-decoration: none;
+                    color: hsl(231, 11%, 63%);
+                }
+                .btn{
+                    background-color:  hsl(213, 96%, 18%);
+                    border:none;
+                    width:100px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:620px) {
+    body{
+        background-color: rgb(226, 245, 239);
+        margin-top: 5rem;
+
+        .page{
+            display: flex;
+            background-color: white;
+            border-radius: 1rem;
+            margin: auto;
+            padding: .8rem;
+            height: 70dvh;
+            width:60% ;
+            .steps{
+                background:no-repeat url('../assets/images/bg-sidebar-desktop.svg');
+                background-size: contain;
+                width: 35%;
+                display: flex;
+                justify-content: flex-start;
+                height: 100%;
+                flex-direction: column;
+                .step_container{
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.9rem;
+                    .step{
+                        width: 2rem;
+                        height: 2rem;
+                        margin: 1rem 1rem 1rem;
+                        border-radius: 100%;
+                        border:.05rem solid white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                    }
+                    .stepInfo{
+                        display: block;
+                        height: fit-content;
+                        color: white;
+                        p{
+                            margin: 0;
+                            color: rgb(209, 208, 208);
+                        }
+                    }
+                }
+            }
+            form{
+                top: 0rem;
+                width: 60%;
+                .btn_section{
+                    background-color: rgba(255, 255, 255, 0);
+                    height: 10dvh;
+                    bottom: 0rem;
                 }
             }
         }
