@@ -37,6 +37,8 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
             .btn_section{
                 background-color: rgb(255, 255, 255);
                 height: 15dvh;
@@ -65,7 +67,6 @@ body{
     body{
         background-color: rgb(226, 245, 239);
         margin-top: 5rem;
-
         .page{
             display: flex;
             background-color: white;

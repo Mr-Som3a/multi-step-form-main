@@ -1,5 +1,5 @@
 import { useState, useReducer } from 'react'
-import { set, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Registration from './components/registration';
@@ -70,7 +70,6 @@ function App() {
   const [selectedPlan, setSelectedPlan] = useState([])
   const [selectedOption, setSelectedOption] = useState([])
   const formData = {
-    // step1: {...userInfo},
     step2: { selectedPlan },
     step3: { selectedOption },
   };
@@ -80,18 +79,18 @@ function App() {
   const plan = {
     plan1: {
       planName: "Acrade",
-      price:[9,90],
+      price: planPeriod==="monthly"? 9:90,          //:[9,90],
       img: "/assets/images/icon-arcade.svg",
       pp:4
     },
     plan2: {
       planName: "Advanced",
-      price: [12,120],
+      price: planPeriod==='monthly'? 12:120,      //:[12,120],
       img: "/assets/images/icon-advanced.svg" 
     },
     plan3: {
       planName: "Pro",
-      price: [15,150],
+      price: planPeriod==='monthly' ? 15:150,    //: [15,150],
       img: "/assets/images/icon-pro.svg" 
     }
   }
