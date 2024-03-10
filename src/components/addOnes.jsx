@@ -1,5 +1,4 @@
 import '../../scss/addOns.scss'
-import { useState } from 'react'
 
 const AddOns = ({styleOfGoBack,handleGoNext,handleGoBack,State,Services,HChange,PP}) => {
     
@@ -12,6 +11,8 @@ const AddOns = ({styleOfGoBack,handleGoNext,handleGoBack,State,Services,HChange,
         if (checkbox == true)
             return style;
     }
+    console.log(Services)
+    console.log(State)
     return (
         <>
             <section className='addOns'>

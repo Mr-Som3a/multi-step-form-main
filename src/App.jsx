@@ -67,7 +67,6 @@ function App() {
   }
   const [currentPage, nextPage] = useState(1);
   const [style, setStyle] = useState({ justifyContent: 'flex-start' })
-console.log(currentPage)
   const [selectedPlan, setSelectedPlan] = useState([])
   const [selectedOption, setSelectedOption] = useState([])
   const formData = {
@@ -80,18 +79,19 @@ console.log(currentPage)
   const pp = (planPeriod === 'monthly') ? 'mo' : 'yr';
   const plan = {
     plan1: {
-      planName: 'Acrade',
-      price: planPeriod === 'monthly' ? 9 : 90,
-      img:"/assets/images/icon-arcade.svg"
+      planName: "Acrade",
+      price:[9,90],
+      img: "/assets/images/icon-arcade.svg",
+      pp:4
     },
     plan2: {
-      planName: 'Advanced',
-      price: planPeriod === 'monthly' ? 12 : 120,
+      planName: "Advanced",
+      price: [12,120],
       img: "/assets/images/icon-advanced.svg" 
     },
     plan3: {
-      planName: 'Pro',
-      price: planPeriod === 'monthly' ? 15 : 150,
+      planName: "Pro",
+      price: [15,150],
       img: "/assets/images/icon-pro.svg" 
     }
   }
@@ -136,7 +136,7 @@ console.log(currentPage)
     planDispatch({ type: 'toggleCheck', planNo })
     setSelectedPlan(plan)
   }
-  function handleClick(style) {
+  const handleClick=(style)=> {
     if (style.justifyContent === 'flex-start') {
       setStyle(style = { justifyContent: 'flex-end' })
       setPlanPeriod('yearly')

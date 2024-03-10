@@ -53,15 +53,22 @@
         width: 180px;
         display:flex;
         justify-content: space-evenly;
-        .form-check-input{
-            width: 2.5rem;
-            height: 1.5rem;
-            background-color: rgb(0, 55, 117);
-            &:focus{
-                box-shadow: none;
+        .check{
+            width: 40px;
+            height: 22px;
+            border-radius: 10px;
+            background-color: hsl(213, 96%, 18%);
+            padding: 0 4px;
+            display: flex;
+            align-items: center;
+            margin: auto 0;
+            .circle{
+                width: 15px;
+                height:15px;
+                margin: 0;
+                border-radius: 100%;
+                background-color: white;
             }
-            
         }
-
     }
 }
